@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({
           </button>
           <div className="flex items-center">
             <img
-              src="/public/Weather_logo_1755539938783.png"
+              src="/Weather_logo_1755539938783.png"
               alt="WeatherGrid"
               className="h-8 sm:h-10 md:h-12 w-auto transition-all duration-300"
             />
