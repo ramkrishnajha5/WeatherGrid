@@ -69,6 +69,8 @@ function App() {
             location.formatted = `${cityName}, Lat: ${location.lat.toFixed(2)}, Lon: ${location.lng.toFixed(2)}`;
             setCurrentLocation(location);
             setLocationError(null); // Clear any previous errors
+            // Exit welcome screen so dashboard renders with current location
+            setIsFirstTimeUser(false);
           });
         },
         (error) => {
@@ -89,6 +91,8 @@ function App() {
           }
           setLocationError(errorMessage);
           setCurrentLocation(null); // Ensure no location is set if there's an error
+          // Exit welcome screen to surface the error UI with retry option
+          setIsFirstTimeUser(false);
         },
         {
           enableHighAccuracy: true,
